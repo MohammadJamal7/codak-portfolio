@@ -135,7 +135,7 @@ const Testimonials = () => {
                         {currentTestimonial.name}
                       </div>
                       <div className="text-gray-300">
-                        {currentTestimonial.role} at {currentTestimonial.company}
+                        {currentTestimonial.role} في {currentTestimonial.company}
                       </div>
                     </div>
                   </div>
