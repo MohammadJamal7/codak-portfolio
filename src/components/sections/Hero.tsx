@@ -14,7 +14,7 @@ const Hero = () => {
       title: "خدمات التطوير",
       subtitle: "Mobile & Web Solutions",
       description: "نطور تطبيقات الجوال والمواقع الإلكترونية الاحترافية بأحدث التقنيات",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      image: "/images/hero/prog.jpg",
       cta: "ابدأ مشروعك",
       icon: Code,
       stats: "50+ مشروع مطور"
