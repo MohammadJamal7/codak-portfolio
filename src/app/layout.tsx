@@ -3,26 +3,27 @@ import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
-  title: "كوداك - حلول تقنية حديثة وتعليم",
+  title: "كودك - حلول تقنية حديثة وتعليم",
   description: "نحن نقدم خدمات تطوير التطبيقات المحمولة، تطوير المواقع، والدورات التقنية. حول أفكارك إلى واقع مع فريقنا المتخصص.",
   keywords: ["تطوير التطبيقات", "تطوير المواقع", "الدورات التقنية", "الحلول البرمجية", "التعليم البرمجي"],
-  authors: [{ name: "فريق كوداك" }],
-  creator: "كوداك",
+  authors: [{ name: "فريق كودك" }],
+  creator: "كودك",
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
     shortcut: "/favicon.png",
   },
+  metadataBase: new URL("https://codakirbid.com/"),
   openGraph: {
     type: "website",
     locale: "ar_SA",
-    url: "https://cocak.dev",
-    title: "كودك - حلول تقنية حديثة وتعليم",
-    description: "نحن نقدم خدمات تطوير التطبيقات المحمولة، تطوير المواقع، والدورات التقنية.",
-    siteName: "كوداك",
+    url: "https://codakirbid.com/",
+  title: "كودك - حلول تقنية حديثة وتعليم",
+  description: "نحن نقدم خدمات تطوير التطبيقات المحمولة، تطوير المواقع، والدورات التقنية.",
+  siteName: "كودك",
     images: [
       {
-        url: "/codak.png",
+        url: "https://codakirbid.com/codak.png",
         width: 1200,
         height: 630,
         alt: "كوداك - حلول تقنية حديثة وتعليم",
@@ -31,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "كوداك - حلول تقنية حديثة وتعليم",
-    description: "نحن نقدم خدمات تطوير التطبيقات المحمولة، تطوير المواقع، والدورات التقنية.",
-    images: ["/codak.png"],
+  title: "كودك - حلول تقنية حديثة وتعليم",
+  description: "نحن نقدم خدمات تطوير التطبيقات المحمولة، تطوير المواقع، والدورات التقنية.",
+    images: ["https://codakirbid.com/codak.png"],
   },
   robots: {
     index: true,
