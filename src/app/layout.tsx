@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   title: "كوداك - حلول تقنية حديثة وتعليم",
   description: "نحن نقدم خدمات تطوير التطبيقات المحمولة، تطوير المواقع، والدورات التقنية. حول أفكارك إلى واقع مع فريقنا المتخصص.",
   keywords: ["تطوير التطبيقات", "تطوير المواقع", "الدورات التقنية", "الحلول البرمجية", "التعليم البرمجي"],
-  authors: [{ name: "فريق كوكاك" }],
-  creator: "كوكاك",
+  authors: [{ name: "فريق كوداك" }],
+  creator: "كوداك",
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: "https://cocak.dev",
     title: "كودك - حلول تقنية حديثة وتعليم",
     description: "نحن نقدم خدمات تطوير التطبيقات المحمولة، تطوير المواقع، والدورات التقنية.",
-    siteName: "كوكاك",
+    siteName: "كوداك",
     images: [
       {
         url: "/codak.png",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "كوكاك - حلول تقنية حديثة وتعليم",
+    title: "كوداك - حلول تقنية حديثة وتعليم",
     description: "نحن نقدم خدمات تطوير التطبيقات المحمولة، تطوير المواقع، والدورات التقنية.",
     images: ["/codak.png"],
   },
