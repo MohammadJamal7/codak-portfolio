@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   keywords: ["تطوير التطبيقات", "تطوير المواقع", "الدورات التقنية", "الحلول البرمجية", "التعليم البرمجي"],
   authors: [{ name: "فريق كوكاك" }],
   creator: "كوكاك",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+    shortcut: "/favicon.png",
+  },
   openGraph: {
     type: "website",
     locale: "ar_SA",
@@ -15,11 +20,20 @@ export const metadata: Metadata = {
     title: "كوكاك - حلول تقنية حديثة وتعليم",
     description: "نحن نقدم خدمات تطوير التطبيقات المحمولة، تطوير المواقع، والدورات التقنية.",
     siteName: "كوكاك",
+    images: [
+      {
+        url: "/codak.png",
+        width: 1200,
+        height: 630,
+        alt: "كوداك - حلول تقنية حديثة وتعليم",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "كوكاك - حلول تقنية حديثة وتعليم",
     description: "نحن نقدم خدمات تطوير التطبيقات المحمولة، تطوير المواقع، والدورات التقنية.",
+    images: ["/codak.png"],
   },
   robots: {
     index: true,

@@ -48,9 +48,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black">
+    <section className="relative min-h-screen overflow-hidden bg-black w-full">
       {/* Slider Container */}
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-screen overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -72,8 +72,8 @@ const Hero = () => {
             </div>
 
             {/* Content Overlay */}
-            <div className="relative z-10 h-full flex items-center">
-              <div className="container mx-auto px-4">
+            <div className="relative z-10 h-full flex items-center w-full overflow-hidden">
+              <div className="container mx-auto px-4 w-full">
                 <div className="max-w-4xl">
                   {/* Slide Content */}
                   <motion.div

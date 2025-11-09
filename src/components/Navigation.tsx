@@ -18,13 +18,13 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-800/50">
-      <div className="container mx-auto px-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-800/50 w-full overflow-x-hidden">
+      <div className="container mx-auto px-4 w-full">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a 
             href="#hero" 
-            className="cursor-pointer"
+            className="cursor-pointer flex items-center h-full"
             onClick={(e) => {
               e.preventDefault();
               const element = document.querySelector('#hero');
@@ -33,23 +33,11 @@ const Navigation = () => {
               }
             }}
           >
-            <div className="flex items-center space-x-3">
-             
             <img 
-                src="/images/codak-irbid-logo.png" 
-                alt="CODAK IRBID Logo" 
-                className="w-15 h-15 object-contain"
-              />
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold text-white">
-                  CODAK
-                </span>
-                <span className="text-xs text-gray-300 -mt-1">
-                  IRBID
-                </span>
-              </div>
-
-            </div>
+              src="/logo.png" 
+              alt="Logo"
+              className="h-12 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Navigation */}

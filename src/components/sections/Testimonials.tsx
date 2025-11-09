@@ -77,8 +77,8 @@ const Testimonials = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="py-20 bg-black">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-black w-full overflow-hidden">
+      <div className="container mx-auto px-4 w-full">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

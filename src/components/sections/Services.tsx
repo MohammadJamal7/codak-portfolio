@@ -57,8 +57,8 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-black">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-20 bg-black w-full overflow-hidden">
+      <div className="container mx-auto px-4 w-full">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -77,7 +77,7 @@ const Services = () => {
         </motion.div>
 
         {/* Split Layout - Development & Education */}
-        <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto w-full">
           
           {/* Left Side - Development Services */}
           <motion.div

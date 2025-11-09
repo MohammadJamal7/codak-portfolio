@@ -20,28 +20,28 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: 'تطوير التطبيقات المحمولة', href: '/services/mobile' },
-      { name: 'تطوير المواقع الإلكترونية', href: '/services/web' },
-      { name: 'تصميم واجهات المستخدم', href: '/services/design' },
-      { name: 'الاستشارات التقنية', href: '/services/consulting' },
+      { name: 'تطوير التطبيقات المحمولة', href: '#' },
+      { name: 'تطوير المواقع الإلكترونية', href: '#' },
+      { name: 'تصميم واجهات المستخدم', href: '#' },
+      { name: 'الاستشارات التقنية', href: '#' },
     ],
     courses: [
-      { name: 'تطوير React', href: '/courses/react' },
-      { name: 'تطوير التطبيقات المحمولة', href: '/courses/mobile' },
-      { name: 'تطوير المواقع الإلكترونية', href: '/courses/web' },
-      { name: 'علوم البيانات', href: '/courses/data-science' },
+      { name: 'تطوير React', href: '#' },
+      { name: 'تطوير التطبيقات المحمولة', href: '#' },
+      { name: 'تطوير المواقع الإلكترونية', href: '#' },
+      { name: 'علوم البيانات', href: '#' },
     ],
     company: [
-      { name: 'من نحن', href: '/about' },
-      { name: 'فريقنا', href: '/team' },
-      { name: 'الوظائف', href: '/careers' },
-      { name: 'المدونة', href: '/blog' },
+      { name: 'من نحن', href: '#' },
+      { name: 'فريقنا', href: '#' },
+      { name: 'الوظائف', href: '#' },
+      { name: 'المدونة', href: '#' },
     ],
     support: [
-      { name: 'اتصل بنا', href: '/contact' },
-      { name: 'مركز المساعدة', href: '/help' },
-      { name: 'سياسة الخصوصية', href: '/privacy' },
-      { name: 'شروط الخدمة', href: '/terms' },
+      { name: 'اتصل بنا', href: '#' },
+      { name: 'مركز المساعدة', href: '#' },
+      { name: 'سياسة الخصوصية', href: '#' },
+      { name: 'شروط الخدمة', href: '#' },
     ],
   };
 
@@ -52,9 +52,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-black text-white w-full overflow-hidden">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -116,13 +116,14 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
+                  <a
+                    href="#"
                     className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group text-sm"
+                    onClick={e => e.preventDefault()}
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

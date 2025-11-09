@@ -6,9 +6,9 @@ import Footer from '@/components/sections/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Navigation />
-      <main>
+      <main className="w-full">
         <section id="hero">
           <Hero />
         </section>
