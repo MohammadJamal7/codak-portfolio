@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ar_SA",
     url: "https://cocak.dev",
-    title: "كوكاك - حلول تقنية حديثة وتعليم",
+    title: "كودك - حلول تقنية حديثة وتعليم",
     description: "نحن نقدم خدمات تطوير التطبيقات المحمولة، تطوير المواقع، والدورات التقنية.",
     siteName: "كوكاك",
     images: [
