@@ -46,7 +46,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'WhatsApp', icon: MessageCircle, href: 'https://wa.me/962792803658' },
+    { name: 'WhatsApp', icon: MessageCircle, href: 'https://wa.me/9627928141721' },
     { name: 'Facebook', icon: Facebook, href: '#' },
     { name: 'LinkedIn', icon: Linkedin, href: '#' },
   ];
@@ -154,4 +154,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
