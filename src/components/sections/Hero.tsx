@@ -2,11 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, BookOpen, Code, Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, BookOpen, Code, Users, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showNotification, setShowNotification] = useState(false);
   
   const slides = [
     {
@@ -39,6 +40,14 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
+  // Show notification after 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowNotification(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -49,6 +58,60 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-black w-full">
+      {/* Course Notification Banner */}
+      <AnimatePresence>
+        {showNotification && (
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-md mx-4"
+          >
+            <div className="bg-gradient-to-r from-primary to-purple-600 rounded-lg shadow-2xl border border-white/20 backdrop-blur-sm">
+              <div className="p-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold text-sm">دورة Flutter جديدة!</h4>
+                      <p className="text-white/90 text-xs">تطوير تطبيقات الهاتف المحمول</p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setShowNotification(false)}
+                    className="text-white/70 hover:text-white transition-colors"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+                <div className="mt-3 flex space-x-2">
+                  <button
+                    onClick={() => {
+                      const element = document.querySelector('#courses');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                      setShowNotification(false);
+                    }}
+                    className="flex-1 bg-white text-primary px-3 py-2 rounded-md text-xs font-semibold hover:bg-white/90 transition-colors"
+                  >
+                    اكتشف الدورة
+                  </button>
+                  <button
+                    onClick={() => setShowNotification(false)}
+                    className="px-3 py-2 text-white/70 text-xs hover:text-white transition-colors"
+                  >
+                    لاحقاً
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       {/* Slider Container */}
       <div className="relative w-full h-screen overflow-hidden">
         <AnimatePresence mode="wait">

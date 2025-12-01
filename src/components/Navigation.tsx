@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Code, BookOpen, Users, Mail, Facebook, Linkedin, MessageCircle } from 'lucide-react';
+import { Menu, X, Code, BookOpen, Users, Mail, Facebook, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
 const Navigation = () => {
@@ -64,27 +64,20 @@ const Navigation = () => {
           {/* Icon Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://wa.me/962792803658"
+              href="https://wa.me/962792841721"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
               title="WhatsApp"
             >
-              <MessageCircle className="w-5 h-5 text-gray-300 hover:text-white" />
+              <img src="/whats.png" alt="WhatsApp" className="w-6 h-6 filter brightness-0 invert" />
             </a>
             <a
               href="#"
               className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
               title="Facebook"
             >
-              <Facebook className="w-5 h-5 text-gray-300 hover:text-white" />
-            </a>
-            <a
-              href="#"
-              className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
-              title="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5 text-gray-300 hover:text-white" />
+              <Facebook className="w-6 h-6 text-gray-300 hover:text-white" />
             </a>
           </div>
 
@@ -146,14 +139,14 @@ const Navigation = () => {
                   <Mail className="w-5 h-5 text-gray-300 hover:text-white" />
                 </button>
                 <a
-                  href="https://wa.me/962792803658"
+                  href="https://wa.me/962792841721"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
                   title="WhatsApp"
                   onClick={() => setIsOpen(false)}
                 >
-                  <MessageCircle className="w-5 h-5 text-gray-300 hover:text-white" />
+                  <img src="/whats.png" alt="WhatsApp" className="w-6 h-6 filter brightness-0 invert" />
                 </a>
                 <a
                   href="#"
@@ -161,15 +154,7 @@ const Navigation = () => {
                   title="Facebook"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Facebook className="w-5 h-5 text-gray-300 hover:text-white" />
-                </a>
-                <a
-                  href="#"
-                  className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
-                  title="LinkedIn"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <Linkedin className="w-5 h-5 text-gray-300 hover:text-white" />
+                  <Facebook className="w-6 h-6 text-gray-300 hover:text-white" />
                 </a>
               </div>
             </div>

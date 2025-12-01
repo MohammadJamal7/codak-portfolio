@@ -3,115 +3,26 @@ import Footer from '@/components/sections/Footer';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
-import { Clock, Users, Star, Play, BookOpen, Code, Smartphone, Globe, ArrowRight } from 'lucide-react';
+import { Clock, Users, Star, Play, BookOpen, Code, Smartphone, Globe, ArrowRight, DollarSign, Award, User } from 'lucide-react';
 
 export default function CoursesPage() {
-  const courses = [
-    {
-      id: 1,
-      title: 'Complete React Development',
-      description: 'Master React from basics to advanced concepts including hooks, context, and state management.',
-      image: '/api/placeholder/400/250',
-      duration: '12 weeks',
-      level: 'Beginner to Intermediate',
-      students: 150,
-      rating: 4.9,
-      price: '$299',
-      originalPrice: '$399',
-      instructor: 'Alex Johnson',
-      category: 'Web Development',
-      technologies: ['React', 'JavaScript', 'JSX', 'Hooks'],
-      featured: true,
-      icon: Code,
-    },
-    {
-      id: 2,
-      title: 'Mobile App Development with React Native',
-      description: 'Build cross-platform mobile apps using React Native and modern development practices.',
-      image: '/api/placeholder/400/250',
-      duration: '10 weeks',
-      level: 'Intermediate',
-      students: 120,
-      rating: 4.8,
-      price: '$349',
-      originalPrice: '$449',
-      instructor: 'Mike Rodriguez',
-      category: 'Mobile Development',
-      technologies: ['React Native', 'JavaScript', 'iOS', 'Android'],
-      featured: true,
-      icon: Smartphone,
-    },
-    {
-      id: 3,
-      title: 'Full-Stack Web Development',
-      description: 'Complete web development course covering frontend, backend, and database technologies.',
-      image: '/api/placeholder/400/250',
-      duration: '16 weeks',
-      level: 'Beginner to Advanced',
-      students: 200,
-      rating: 4.9,
-      price: '$499',
-      originalPrice: '$699',
-      instructor: 'Sarah Chen',
-      category: 'Full-Stack',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      featured: false,
-      icon: Globe,
-    },
-    {
-      id: 4,
-      title: 'JavaScript Fundamentals',
-      description: 'Learn JavaScript from the ground up with hands-on projects and real-world examples.',
-      image: '/api/placeholder/400/250',
-      duration: '8 weeks',
-      level: 'Beginner',
-      students: 300,
-      rating: 4.7,
-      price: '$199',
-      originalPrice: '$299',
-      instructor: 'Emily Davis',
-      category: 'Programming',
-      technologies: ['JavaScript', 'ES6+', 'DOM', 'Async Programming'],
-      featured: false,
-      icon: BookOpen,
-    },
-    {
-      id: 5,
-      title: 'UI/UX Design for Developers',
-      description: 'Learn design principles and tools to create beautiful and functional user interfaces.',
-      image: '/api/placeholder/400/250',
-      duration: '6 weeks',
-      level: 'Beginner',
-      students: 80,
-      rating: 4.8,
-      price: '$249',
-      originalPrice: '$349',
-      instructor: 'Sarah Chen',
-      category: 'Design',
-      technologies: ['Figma', 'Adobe XD', 'Design Systems', 'Prototyping'],
-      featured: false,
-      icon: BookOpen,
-    },
-    {
-      id: 6,
-      title: 'Python for Data Science',
-      description: 'Learn Python programming and data analysis with pandas, numpy, and machine learning.',
-      image: '/api/placeholder/400/250',
-      duration: '14 weeks',
-      level: 'Intermediate',
-      students: 100,
-      rating: 4.9,
-      price: '$399',
-      originalPrice: '$549',
-      instructor: 'Alex Johnson',
-      category: 'Data Science',
-      technologies: ['Python', 'Pandas', 'NumPy', 'Machine Learning'],
-      featured: false,
-      icon: Code,
-    },
-  ];
+  const course = {
+    title: 'انشاء تطبيقات الهاتف باستخدام فلاتر',
+    description: 'تعلم كيفية إنشاء تطبيقات الهاتف المحمول باستخدام Flutter، إطار العمل الشهير من Google. ستتعلم أساسيات Dart، تصميم واجهات المستخدم، والتعامل مع البيانات.',
+    duration: '8 أسابيع',
+    level: 'مبتدئ إلى متوسط',
+    instructor: 'فريق كودك',
+    category: 'تطوير التطبيقات المحمولة',
+    technologies: ['Flutter', 'Dart', 'Firebase', 'Material Design'],
+    price: '300 دينار أردني',
+    originalPrice: '400 دينار أردني',
+    icon: Code,
+  };
 
-  const categories = ['All', 'Web Development', 'Mobile Development', 'Full-Stack', 'Programming', 'Design', 'Data Science'];
+  const schedules = [
+    { days: 'الثلاثاء والخميس', times: ['9-10:30', '11-12:30', '1-2:30'] },
+    { days: 'الاثنين والأربعاء', times: ['9-10:30', '11-12:30', '1-2:30'] },
+  ];
 
   return (
     <div className="min-h-screen">
@@ -122,156 +33,153 @@ export default function CoursesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Tech <span className="text-yellow-400">Courses</span>
+              الدورات <span className="text-yellow-400">التعليمية</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              Master the latest technologies with our comprehensive courses. 
-              Learn from industry experts and build real-world projects.
+              تعلم أحدث التقنيات من خلال دوراتنا الشاملة.
+              تعلم من خبراء الصناعة وأنشئ مشاريع حقيقية.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="secondary"
-                size="lg"
-                className="bg-white text-primary hover:bg-white/90"
+              <a
+                href="#course"
+                className="inline-flex items-center px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-white/90 transition-all duration-300"
               >
                 <Play className="w-5 h-5 mr-2" />
-                Start Learning
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary"
+                ابدأ التعلم
+              </a>
+              <a
+                href="https://wa.me/962792841721"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary transition-all duration-300"
               >
-                View All Courses
-              </Button>
+                سجل الآن
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Course Categories */}
-      <section className="py-12 bg-slate-50 dark:bg-slate-900">
+      {/* Course Section */}
+      <section id="course" className="py-20 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className="px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white shadow-md hover:shadow-lg"
-              >
-                {category}
-              </button>
-            ))}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              الدورات <span className="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">التعليمية</span>
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              دورات متخصصة لبناء الجيل القادم من المطورين
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-0 bg-white dark:bg-slate-800 overflow-hidden">
+              <div className="relative">
+                <div className="aspect-video bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/flutter.png" 
+                    alt="Flutter Course" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <Badge variant="secondary" className="mb-4">
+                    {course.category}
+                  </Badge>
+                  <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+                    {course.title}
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mb-6">
+                    {course.description}
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                  <div className="text-center">
+                    <Clock className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <p className="font-semibold text-slate-900 dark:text-white">{course.duration}</p>
+                    <p className="text-sm text-slate-500">المدة</p>
+                  </div>
+                  <div className="text-center">
+                    <Award className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <p className="font-semibold text-slate-900 dark:text-white">{course.level}</p>
+                    <p className="text-sm text-slate-500">المستوى</p>
+                  </div>
+                  <div className="text-center">
+                    <User className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <p className="font-semibold text-slate-900 dark:text-white">{course.instructor}</p>
+                    <p className="text-sm text-slate-500">المدرب</p>
+                  </div>
+                  <div className="text-center">
+                    <DollarSign className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <div className="flex flex-col items-center">
+                      <span className="font-semibold text-slate-900 dark:text-white">{course.price}</span>
+                      <span className="text-sm text-slate-500 line-through">{course.originalPrice}</span>
+                      <span className="text-xs text-green-400 mt-1">خصم</span>
+                    </div>
+                    <p className="text-sm text-slate-500">السعر</p>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4">التقنيات المستخدمة</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {course.technologies.map((tech, index) => (
+                      <Badge key={index} variant="outline">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <a
+                    href="https://wa.me/962792841721"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-primary to-purple-600 text-white font-semibold rounded-lg hover:from-primary/90 hover:to-purple-600/90 transition-all duration-300"
+                  >
+                    سجل الآن
+                    <ArrowRight className="w-5 h-5 mr-2" />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Featured Courses */}
-      <section className="py-20 bg-white dark:bg-slate-800">
+      {/* Schedule Section */}
+      <section className="py-20 bg-slate-50 dark:bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-              Featured <span className="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">Courses</span>
+              جدول <span className="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">المحاضرات</span>
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Our most popular courses designed to take you from beginner to professional developer.
+              اختر الجدول المناسب لك
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {courses.map((course) => (
-              <Card key={course.id} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-white dark:bg-slate-800 overflow-hidden">
-                {/* Course Image */}
-                <div className="relative">
-                  <div className="aspect-video bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center">
-                    <course.icon className="w-16 h-16 text-slate-400" />
-                  </div>
-                  
-                  {/* Featured Badge */}
-                  {course.featured && (
-                    <div className="absolute top-4 left-4">
-                      <Badge variant="success">Featured</Badge>
-                    </div>
-                  )}
-
-                  {/* Play Button Overlay */}
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button
-                      variant="secondary"
-                      size="sm"
-                      className="bg-white text-slate-900 hover:bg-white/90"
-                    >
-                      <Play className="w-4 h-4 mr-2" />
-                      Preview Course
-                    </Button>
-                  </div>
-                </div>
-
-                <CardContent className="p-6">
-                  {/* Course Info */}
-                  <div className="mb-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge variant="secondary" className="text-xs">
-                        {course.category}
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        {course.level}
-                      </Badge>
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
-                      {course.title}
-                    </h3>
-                    <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
-                      {course.description}
-                    </p>
-                  </div>
-
-                  {/* Course Stats */}
-                  <div className="flex items-center gap-4 mb-4 text-sm text-slate-500 dark:text-slate-400">
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{course.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Users className="w-4 h-4" />
-                      <span>{course.students} students</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span>{course.rating}</span>
-                    </div>
-                  </div>
-
-                  {/* Technologies */}
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-1">
-                      {course.technologies.map((tech, index) => (
-                        <Badge key={index} variant="secondary" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Price and CTA */}
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-2xl font-bold text-primary">
-                        {course.price}
-                      </span>
-                      {course.originalPrice && (
-                        <span className="text-sm text-slate-500 line-through ml-2">
-                          {course.originalPrice}
-                        </span>
-                      )}
-                    </div>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300"
-                    >
-                      Enroll Now
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {schedules.map((schedule, index) => (
+              <Card key={index} className="border-0 bg-white dark:bg-slate-800">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl text-slate-900 dark:text-white">
+                    {schedule.days}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    {schedule.times.map((time, timeIndex) => (
+                      <div key={timeIndex} className="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                        <Clock className="w-5 h-5 text-primary" />
+                        <span className="font-semibold text-slate-900 dark:text-white">{time}</span>
+                      </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
