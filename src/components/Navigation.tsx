@@ -64,7 +64,7 @@ const Navigation = () => {
           {/* Icon Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://wa.me/962792841721"
+              href="https://wa.me/0771488888"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
@@ -139,7 +139,7 @@ const Navigation = () => {
                   <Mail className="w-5 h-5 text-gray-300 hover:text-white" />
                 </button>
                 <a
-                  href="https://wa.me/962792841721"
+                  href="https://wa.me/0771488888"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg hover:bg-gray-800 transition-colors"

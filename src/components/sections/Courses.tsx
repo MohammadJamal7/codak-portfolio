@@ -152,7 +152,7 @@ const Courses = () => {
                     <ArrowRight className="w-5 h-5 mr-2" />
                   </Link>
                   <a
-                    href="https://wa.me/962792841721"
+                    href="https://wa.me/0771488888"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition-all duration-300"

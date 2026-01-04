@@ -17,8 +17,13 @@ export default function ContactPage() {
       icon: Phone,
       title: 'Call Us',
       description: 'Mon-Fri from 8am to 5pm',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: (
+        <div className="flex flex-col gap-1">
+          <span>026575251 <span className="ml-2">أرضي</span></span>
+          <span>0771488888 <span className="ml-2">رقم هاتف</span></span>
+        </div>
+      ),
+      href: 'tel:026575251',
     },
     {
       icon: MapPin,

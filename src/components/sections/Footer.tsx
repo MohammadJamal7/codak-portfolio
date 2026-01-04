@@ -46,7 +46,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'WhatsApp', icon: MessageCircle, href: 'https://wa.me/9627928141721' },
+    { name: 'WhatsApp', icon: MessageCircle, href: 'https://wa.me/0771488888' },
     { name: 'Facebook', icon: Facebook, href: '#' },
     { name: 'LinkedIn', icon: Linkedin, href: '#' },
   ];
@@ -82,7 +82,15 @@ const Footer = () => {
                 <div className="w-6 h-6 bg-white/10 rounded-md flex items-center justify-center">
                   <Phone className="w-3 h-3" />
                 </div>
-                <span className="text-sm">+962 792 841 721</span>
+                <span className="text-sm font-bold">أرضي:</span>
+                <span className="text-sm ltr:ml-2 rtl:mr-2">026575251</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <div className="w-6 h-6 bg-white/10 rounded-md flex items-center justify-center">
+                  <Phone className="w-3 h-3" />
+                </div>
+                <span className="text-sm font-bold">رقم هاتف:</span>
+                <span className="text-sm ltr:ml-2 rtl:mr-2">0771488888</span>
               </div>
               <div className="flex items-center justify-between text-gray-300">
                 <div className="flex items-center space-x-3">

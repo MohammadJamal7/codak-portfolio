@@ -48,7 +48,7 @@ export default function CoursesPage() {
                 ابدأ التعلم
               </a>
               <a
-                href="https://wa.me/962792841721"
+                href="https://wa.me/0771488888"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary transition-all duration-300"
@@ -137,7 +137,7 @@ export default function CoursesPage() {
 
                 <div className="text-center">
                   <a
-                    href="https://wa.me/962792841721"
+                    href="https://wa.me/0771488888"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-primary to-purple-600 text-white font-semibold rounded-lg hover:from-primary/90 hover:to-purple-600/90 transition-all duration-300"
